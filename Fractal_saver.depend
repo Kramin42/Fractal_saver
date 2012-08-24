@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1332565647 source:c:\documents and settings\cameron\my documents\programming\sdlworkspace\fractal_saver\main.cpp
+	"SDL/SDL.h"
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<cmath>
+
+1332563271 c:\documents and settings\cameron\my documents\programming\sdlworkspace\fractal_saver\pngimage.h
+	<string>
+	<cassert>
+
+1345796965 source:f:\documents and settings\cameron\my documents\cpp_projects\fractal_saver\main.cpp
+	"SDL/SDL.h"
+	<string>
+	<iostream>
+	<fstream>
+	<sstream>
+	<cmath>
+
