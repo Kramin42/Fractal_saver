@@ -38,6 +38,10 @@ bool distanceDivide = false;
 double ddA = 0.4;
 double ddB = 0.5;
 
+double Rs=0.4,Rm=0.5,Re=1;//start, middle, and end values for the color calculation
+double Gs=0.3,Gm=0.5,Ge=0.7;
+double Bs=0,Bm=0.5,Be=0.6;
+
 double cx,cy;
 double x,y,xsq,ysq;
 double mu;
@@ -125,9 +129,9 @@ Uint32 Mandelbrot(int i, int j){//calculates the values for the mandelbrot set
         G=0;
         B=0;
 
-        B = getColorValue(mu,0,0.5,0.6);
-        G = getColorValue(mu,0.3,0.5,0.7);
-        R = getColorValue(mu,0.4,0.5,1);
+        R = getColorValue(mu,Rs,Rm,Re);
+        G = getColorValue(mu,Gs,Gm,Ge);
+        B = getColorValue(mu,Bs,Bm,Be);
 
         if (distanceDivide)
         {
@@ -311,6 +315,15 @@ int main( int argc, char *argv[] )
                 hd = h;
                 cout << "IH: "<<h<<endl;
             }
+            else if(!strcmp(argv[i], "-RS")){Rs = atof(argv[i+1]); cout << "RS: "<<Rs<<endl;}
+            else if(!strcmp(argv[i], "-RM")){Rm = atof(argv[i+1]); cout << "RM: "<<Rm<<endl;}
+            else if(!strcmp(argv[i], "-RE")){Re = atof(argv[i+1]); cout << "RE: "<<Re<<endl;}
+            else if(!strcmp(argv[i], "-GS")){Gs = atof(argv[i+1]); cout << "GS: "<<Gs<<endl;}
+            else if(!strcmp(argv[i], "-GM")){Gm = atof(argv[i+1]); cout << "GM: "<<Gm<<endl;}
+            else if(!strcmp(argv[i], "-GE")){Ge = atof(argv[i+1]); cout << "GE: "<<Ge<<endl;}
+            else if(!strcmp(argv[i], "-BS")){Bs = atof(argv[i+1]); cout << "BS: "<<Bs<<endl;}
+            else if(!strcmp(argv[i], "-BM")){Bm = atof(argv[i+1]); cout << "BM: "<<Bm<<endl;}
+            else if(!strcmp(argv[i], "-BE")){Be = atof(argv[i+1]); cout << "BE: "<<Be<<endl;}
 
     }
 
